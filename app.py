@@ -748,7 +748,7 @@ elif pagina == PAGINAS[4]:
     for g in letras:
         valores = km["silueta"][grupo == g].sort_values(ascending=False).values
         posiciones = np.arange(inicio, inicio + len(valores))
-        fig.add_scatter(x=valores, y=posiciones, mode="lines", fill="tozerox", name=etiqueta(g),
+        fig.add_scatter(x=valores, y=posiciones, mode="lines", fill="tozerox", name=f"Grupo {g}",
                         line=dict(color=color_grupo[g], width=1),
                         hovertemplate="silueta %{x:.2f}" + f"<extra>Grupo {g}</extra>")
         inicio += len(valores) + 150
