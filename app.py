@@ -337,10 +337,12 @@ if pagina == PAGINAS[0]:
 - **Cobertura:** las 10.000 sociedades con mayores ingresos operacionales que reportan a la Supersociedades
   y a otras superintendencias (Financiera, Salud, Transporte, Servicios Públicos, Vigilancia).
   La más pequeña vendió {mm(crudo['INGRESOS_OPERACIONALES'].min(), 1)} mil millones de pesos.
-- **Verificación:** los totales del archivo coinciden con los del comunicado oficial: ingresos por
-  {num(crudo['INGRESOS_OPERACIONALES'].sum() / 1e9, 1)} billones, utilidades por
-  {num(crudo['GANANCIA_PERDIDA'].sum() / 1e9, 1)} billones y activos por
-  {num(crudo['TOTAL_ACTIVOS'].sum() / 1e9, 1)} billones.
+- **Verificación:** el archivo suma ingresos por {num(crudo['INGRESOS_OPERACIONALES'].sum() / 1e9, 1)} billones,
+  utilidades por {num(crudo['GANANCIA_PERDIDA'].sum() / 1e9, 1)} billones y activos por
+  {num(crudo['TOTAL_ACTIVOS'].sum() / 1e9, 1)} billones. El comunicado, en la versión consultada el
+  {an.FECHA_CONSULTA}, reporta 1.853,8; 138,6 y 2.560,4 billones: la única diferencia está en las utilidades,
+  de 0,05 %. Su primera versión, la que recogió la prensa, hablaba de 1.852,9 y 138,1 billones; frente a
+  esas cifras el archivo difiere en 0,05 % y 0,4 %.
 """
     )
 
